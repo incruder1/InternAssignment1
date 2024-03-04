@@ -6,11 +6,11 @@ import { createUser, getAllUsers } from "../controllers/userController.js";
 const router = express.Router();
 
 //routing
-//REGISTER || METHOD POST
+//Create Route || METHOD POST
 
 router.post("/create",requireSignIn, createUser);
 
-//LOGIN || POST
+// Get All Users || GET
 router.get("/getAll",requireSignIn, getAllUsers);
 
 export default router;

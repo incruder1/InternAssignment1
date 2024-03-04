@@ -1,5 +1,5 @@
 import User from "../models/userModel.js";
-
+//create user method
 export const createUser = async (req, res) => {
   try {
     const { phone_number, priority } = req.body;
@@ -12,7 +12,7 @@ export const createUser = async (req, res) => {
     res.status(500).json({ error: "Internal Server Error" });
   }
 };
-
+//get all users method
 export const getAllUsers = async (req, res) => {
   try {
     const users = await User.find({});

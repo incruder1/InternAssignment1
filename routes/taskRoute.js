@@ -6,13 +6,15 @@ import {createTask, allUsersTasks, updateTask,deleteTask } from "../controllers/
 const router = express.Router();
 
 //routing
-//REGISTER || METHOD POST
 
+//REGISTER || METHOD POST
 router.post('/create',requireSignIn,createTask);
 
-//LOGIN || POST
+// Get All Users || GET
 router.get('/user-tasks',requireSignIn, allUsersTasks);
+// Update task
 router.post('/update-task/:task_id',requireSignIn,updateTask);
+// Delete task
 router.post('/delete-task/:task_id',requireSignIn,deleteTask);
 
 export default router;

@@ -2,6 +2,7 @@ import Task from "../models/taskModel.js";
 import SubTask from "../models/subTaskModel.js";
 import cron from "node-cron";
 import twilio from "twilio";
+// Calculate priority based on due_date
 const calculatePriority = (due_date) => {
   const today = new Date();
   const tomorrow = new Date(today);
@@ -19,7 +20,7 @@ const calculatePriority = (due_date) => {
     return 3;
   }
 };
-
+// Create task
 export const createTask = async (req, res) => {
   try {
     const { title, description, due_date } = req.body;

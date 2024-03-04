@@ -1,5 +1,5 @@
 import SubTask from "../models/subTaskModel.js";
-
+// Create subtask
 export const createSubTask = async (req, res) => {
   try {
     const { title, description, status } = req.body;
@@ -43,7 +43,7 @@ export const updateSubTask = async (req, res) => {
   }
 };
 
-// Delete SubTask API
+// delete subtask
 export const deleteSubTask = async (req, res) => {
   try {
     const { subtask_id } = req.params;

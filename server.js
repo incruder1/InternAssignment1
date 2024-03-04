@@ -7,6 +7,7 @@ import userRouter from "./routes/userRoute.js";
 import taskRouter from "./routes/taskRoute.js";
 import subTaskRouter from "./routes/subTaskRoute.js";
 const PORT = process.env.PORT || 8080;
+
 //configure env
 dotenv.config();
 
@@ -25,10 +26,7 @@ app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/task", taskRouter);
 app.use("/api/v1/subtasks", subTaskRouter);
-
-// for hosting the frontend server
-
-
+ 
 //run listen
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

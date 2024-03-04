@@ -5,7 +5,7 @@ import cors from "cors";
 import authRoutes from "./routes/authRoute.js";
 import userRouter from "./routes/userRoute.js";
 import taskRouter from "./routes/taskRoute.js";
-import subTaskRouter from "./routes/subTaskRoute.js";
+import subTaskRouter from "./routes/subtaskRoute.js";
 const PORT = process.env.PORT || 8080;
 
 //configure env
